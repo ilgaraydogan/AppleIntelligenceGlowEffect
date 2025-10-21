@@ -20,7 +20,7 @@ A beautiful, customizable SwiftUI-based glow effect that mimics Apple's Intellig
 - ✅ WatchOS (Complete)
 - ✅ iOS (Complete)
 - ✅ iPadOS (Complete)
-- ⏳ macOS (Coming Soon)
+- ✅ macOS (Complete)
 
 ## Demos
 
@@ -56,11 +56,28 @@ Optimized for iPad's larger display with adjusted parameters:
 - Increased corner radius (65pt) for better visual proportion on larger screens
 - Enhanced glow effect with adjusted blur radii and line widths
 - Smooth animations perfectly tuned for iPad displays
+
+### macOS
+Performance-optimized versions for macOS applications:
+
+1. **Standard Version** (`macOS.swift`)
+   - Optimized for modern Macs (M1/M2/Intel)
+   - Uses GeometryReader for adaptive window sizing
+   - Corner radius (30pt) perfect for macOS windows
+   - Proper timer cleanup to prevent memory leaks
+   - Low CPU usage (20-40%)
+
+2. **Low Power Mode** (`macOS_LowPowerMode.swift`)
+   - Ultra-performance variant for battery saving
+   - Reduced blur layers and slower animation frequency
+   - Ideal for MacBooks on battery power
+   - Minimal CPU usage (10-20%)
+
 **Performance Note:** All files have been optimized to fix critical timer leaks that caused 100% CPU usage. See [PERFORMANCE_GUIDE.md](PERFORMANCE_GUIDE.md) for complete optimization details and device recommendations.
 
 ## Installation
 
-1. Copy the desired platform file (e.g., `WatchOS.swift`, `IOS.swift`, or `iPadOS.swift`) into your project
+1. Copy the desired platform file (e.g., `WatchOS.swift`, `IOS.swift`, `iPadOS.swift`, or `macOS.swift`) into your project
 2. Import the file in your SwiftUI view
 3. Implement the effect as shown in the examples below
 
