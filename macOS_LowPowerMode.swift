@@ -89,10 +89,11 @@ struct EffectNoBlurLowPower: View {
         }
     }
 }
-
+// NOTE: Renamed parameter from `hex` to `hexL` to avoid conflicts with other Color(hex:) extensions in macOS.swift.
+// This change preserves the same functionality while ensuring compatibility when both files are used together.
 extension Color {
-    init(hex: String) {
-        let scanner = Scanner(string: hex)
+    init(hexL: String) {
+        let scanner = Scanner(string: hexL)
         _ = scanner.scanString("#")
 
         var hexNumber: UInt64 = 0
