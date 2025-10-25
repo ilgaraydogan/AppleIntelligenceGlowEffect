@@ -1,8 +1,8 @@
 //
 //  TypeToSiri.swift
-//  WIP
+//  
 //
-//  Created by Jacob Mobin on 1/10/25.
+//  Created by Bayram Ilgar Aydogan on 25/10/25.
 //
 
 
@@ -17,39 +17,39 @@ struct TypeToSiri: View {
 
     private var gradientsPill: [Gradient] = [
         Gradient(colors: [
-            Color(hex: "#FF6778"), // PINK
-            Color(hex: "#FFBA71")  // YELLOW
+            Color(hexT: "#FF6778"), // PINK
+            Color(hexT: "#FFBA71")  // YELLOW
         ]),
         Gradient(colors: [
-            Color(hex: "#FFBA71"), // YELLOW
-            Color(hex: "#8D99FF")  // BLUE
+            Color(hexT: "#FFBA71"), // YELLOW
+            Color(hexT: "#8D99FF")  // BLUE
         ]),
         Gradient(colors: [
-            Color(hex: "#8D99FF"), // BLUE
-            Color(hex: "#F5B9EA")  // WHITE
+            Color(hexT: "#8D99FF"), // BLUE
+            Color(hexT: "#F5B9EA")  // WHITE
         ]),
         Gradient(colors: [
-            Color(hex: "#F5B9EA"), // WHITE
-            Color(hex: "#FF6778")  // PINK
+            Color(hexT: "#F5B9EA"), // WHITE
+            Color(hexT: "#FF6778")  // PINK
         ])
     ]
     
     private var gradientsKeyboard: [Gradient] = [
         Gradient(colors: [
-            Color(hex: "#A0414B"), // Further Darkened Pink
-            Color(hex: "#A07749")  // Further Darkened Yellow
+            Color(hexT: "#A0414B"), // Further Darkened Pink
+            Color(hexT: "#A07749")  // Further Darkened Yellow
         ]),
         Gradient(colors: [
-            Color(hex: "#A07749"), // Further Darkened Yellow
-            Color(hex: "#5A6299")  // Further Darkened Blue
+            Color(hexT: "#A07749"), // Further Darkened Yellow
+            Color(hexT: "#5A6299")  // Further Darkened Blue
         ]),
         Gradient(colors: [
-            Color(hex: "#5A6299"), // Further Darkened Blue
-            Color(hex: "#9E7296")  // Further Darkened White
+            Color(hexT: "#5A6299"), // Further Darkened Blue
+            Color(hexT: "#9E7296")  // Further Darkened White
         ]),
         Gradient(colors: [
-            Color(hex: "#9E7296"), // Further Darkened White
-            Color(hex: "#A0414B")  // Further Darkened Pink
+            Color(hexT: "#9E7296"), // Further Darkened White
+            Color(hexT: "#A0414B")  // Further Darkened Pink
         ])
     ]
     
@@ -89,7 +89,7 @@ struct TypeToSiri: View {
                         .padding()
                         .background(
                             RoundedRectangle(cornerRadius: 25)
-                                .fill(Color(hex: "#483838").opacity(0.6))
+                                .fill(Color(hexT: "#483838").opacity(0.6))
                                 .brightness(0.5)
                         )
                         .foregroundColor(.white)
@@ -129,8 +129,8 @@ struct TypeToSiri: View {
 }
 
 extension Color {
-    init(hex: String) {
-        let scanner = Scanner(string: hex)
+    init(hexT: String) {
+        let scanner = Scanner(string: hexT)
         _ = scanner.scanString("#")
         
         var hexNumber: UInt64 = 0
